@@ -1,0 +1,3 @@
+ip="$(ifconfig | grep -A 1 'eth0' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1)"
+wget  --post-data "username=dev_123&pswd=12345" http://192.168.0.20/has_proj
+echo $ip
